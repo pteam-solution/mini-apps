@@ -30,10 +30,15 @@ jobs:
           cache: npm
           cache-dependency-path: |
             apps/team-randomizer/package-lock.json
+            apps/cosmic-draw-arena/package-lock.json
             apps/ai-analysis-skillset/package-lock.json
 
       - name: Install team-randomizer dependencies
         working-directory: apps/team-randomizer
+        run: npm ci
+
+      - name: Install cosmic-draw-arena dependencies
+        working-directory: apps/cosmic-draw-arena
         run: npm ci
 
       - name: Install ai-analysis-skillset dependencies
@@ -44,6 +49,10 @@ jobs:
         working-directory: apps/team-randomizer
         run: npm run build
 
+      - name: Build cosmic-draw-arena
+        working-directory: apps/cosmic-draw-arena
+        run: npm run build
+
       - name: Build ai-analysis-skillset
         working-directory: apps/ai-analysis-skillset
         run: npm run build
@@ -52,6 +61,8 @@ jobs:
         run: |
           mkdir -p public/team-randomizer
           cp -R apps/team-randomizer/dist/. public/team-randomizer/
+          mkdir -p public/cosmic-draw-arena
+          cp -R apps/cosmic-draw-arena/dist/. public/cosmic-draw-arena/
           mkdir -p public/ai-analysis-skillset
           cp -R apps/ai-analysis-skillset/dist/. public/ai-analysis-skillset/
 
