@@ -1,0 +1,11 @@
+{
+  "name": "mini-apps",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:team-randomizer": "npm --prefix apps/team-randomizer run dev",
+    "build:team-randomizer": "npm --prefix apps/team-randomizer run build",
+    "build": "npm run build:team-randomizer"
+  }
+}

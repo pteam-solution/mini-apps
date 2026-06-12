@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.npm-cache/
+dev-server.log
+apps/*/node_modules/
+apps/*/dist/
+apps/*/.npm-cache/
+apps/*/dev-server.log
+public/team-randomizer/
