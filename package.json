@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev:team-randomizer": "npm --prefix apps/team-randomizer run dev",
+    "dev:ai-analysis-skillset": "npm --prefix apps/ai-analysis-skillset run dev",
     "build:team-randomizer": "npm --prefix apps/team-randomizer run build",
-    "build": "npm run build:team-randomizer"
+    "build:ai-analysis-skillset": "npm --prefix apps/ai-analysis-skillset run build",
+    "build": "npm run build:team-randomizer && npm run build:ai-analysis-skillset"
   }
 }

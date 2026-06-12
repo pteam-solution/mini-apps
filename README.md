@@ -1,21 +1,23 @@
 # Mini Apps
 
-작은 웹앱들을 한 곳에서 관리하고 GitHub Pages로 배포하는 저장소입니다.
+업무용 미니앱을 한곳에서 관리하고 GitHub Pages로 배포하는 저장소입니다.
 
 ## 앱 목록
 
-- `apps/team-randomizer`: 조 편성 도구
+- `apps/team-randomizer`: 팀 랜덤 배정 도구
+- `apps/ai-analysis-skillset`: AI 분석 스킬 셋 시각화 도구
 
 ## 로컬 실행
 
 ```powershell
 npm run dev:team-randomizer
+npm run dev:ai-analysis-skillset
 ```
 
-또는 앱 폴더로 직접 이동해서 실행할 수 있습니다.
+또는 각 앱 폴더로 직접 이동해서 실행할 수 있습니다.
 
 ```powershell
-cd apps/team-randomizer
+cd apps/ai-analysis-skillset
 npm install
 npm run dev
 ```
@@ -27,6 +29,7 @@ npm run dev
 ```text
 https://pteam-solution.github.io/mini-apps/
 https://pteam-solution.github.io/mini-apps/team-randomizer/
+https://pteam-solution.github.io/mini-apps/ai-analysis-skillset/
 ```
 
-GitHub 저장소의 `Settings > Pages`에서 `Source`를 `GitHub Actions`로 설정하면, `main` 브랜치 push 시 자동 배포됩니다.
+GitHub 저장소의 `Settings > Pages`에서 `Source`를 `GitHub Actions`로 설정하면, `main` 브랜치에 push할 때 자동 배포됩니다.

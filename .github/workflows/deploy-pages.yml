@@ -28,20 +28,32 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: apps/team-randomizer/package-lock.json
+          cache-dependency-path: |
+            apps/team-randomizer/package-lock.json
+            apps/ai-analysis-skillset/package-lock.json
 
       - name: Install team-randomizer dependencies
         working-directory: apps/team-randomizer
+        run: npm ci
+
+      - name: Install ai-analysis-skillset dependencies
+        working-directory: apps/ai-analysis-skillset
         run: npm ci
 
       - name: Build team-randomizer
         working-directory: apps/team-randomizer
         run: npm run build
 
+      - name: Build ai-analysis-skillset
+        working-directory: apps/ai-analysis-skillset
+        run: npm run build
+
       - name: Collect site files
         run: |
           mkdir -p public/team-randomizer
           cp -R apps/team-randomizer/dist/. public/team-randomizer/
+          mkdir -p public/ai-analysis-skillset
+          cp -R apps/ai-analysis-skillset/dist/. public/ai-analysis-skillset/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

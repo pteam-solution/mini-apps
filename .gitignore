@@ -7,3 +7,4 @@ apps/*/dist/
 apps/*/.npm-cache/
 apps/*/dev-server.log
 public/team-randomizer/
+public/ai-analysis-skillset/
