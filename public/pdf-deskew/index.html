@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF 기울기 보정</title>
+    <style>
+      :root {
+        font-family: Inter, Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+        color: #17202e;
+        background: #f7f9fa;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 320px; }
+      main { width: min(860px, 100%); min-height: 100vh; margin: 0 auto; padding: 56px 24px; }
+      a { color: #007c7e; }
+      .back { display: inline-flex; margin-bottom: 28px; color: #526173; font-size: 14px; text-decoration: none; }
+      h1 { margin: 0; font-size: clamp(32px, 5vw, 48px); line-height: 1.12; }
+      p { margin: 16px 0 0; color: #647386; font-size: 17px; line-height: 1.7; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border: 1px solid #008f91; border-radius: 8px; background: #008f91; color: #fff; font-weight: 700; text-decoration: none; }
+      .button.secondary { background: #fff; color: #008f91; }
+      section { margin-top: 42px; }
+      h2 { margin: 0 0 14px; font-size: 22px; }
+      ol, ul { margin: 0; padding-left: 22px; color: #445164; line-height: 1.8; }
+      code { padding: 2px 5px; border-radius: 5px; background: #e8eef2; color: #17202e; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="../">Mini Apps로 돌아가기</a>
+      <h1>PDF 기울기 보정</h1>
+      <p>스캔한 PDF 파일을 선택해서 페이지별 기울기를 자동으로 보정하는 Windows용 데스크톱 앱입니다. 브라우저에 PDF를 업로드하지 않고, 내려받은 앱을 PC에서 실행합니다.</p>
+      <div class="actions">
+        <a class="button" href="../downloads/pdf-deskew-windows.zip" download>Windows 앱 다운로드</a>
+        <a class="button secondary" href="https://github.com/pteam-solution/mini-apps/blob/main/public/downloads/pdf-deskew-windows.zip">GitHub에서 보기</a>
+      </div>
+      <section>
+        <h2>사용 방법</h2>
+        <ol>
+          <li>ZIP 파일을 내려받아 원하는 폴더에 압축을 풉니다.</li>
+          <li><code>requirements.txt</code>의 Python 패키지를 설치합니다.</li>
+          <li><code>run-gui.bat</code> 파일을 더블클릭합니다.</li>
+          <li>PDF 파일을 선택하고 저장 위치를 확인한 뒤 보정을 시작합니다.</li>
+        </ol>
+      </section>
+      <section>
+        <h2>포함 기능</h2>
+        <ul>
+          <li>PDF 파일 선택 창</li>
+          <li>자동 기울기 보정</li>
+          <li>DPI 및 수동 보정 각도 입력</li>
+          <li>완료 후 저장 경로와 페이지별 보정 각도 표시</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
