@@ -6,10 +6,12 @@
   "scripts": {
     "dev:team-randomizer": "npm --prefix apps/team-randomizer run dev",
     "dev:cosmic-draw-arena": "npm --prefix apps/cosmic-draw-arena run dev",
+    "dev:glory-vortex": "npm --prefix apps/glory-vortex run dev",
     "dev:ai-analysis-skillset": "npm --prefix apps/ai-analysis-skillset run dev",
     "build:team-randomizer": "npm --prefix apps/team-randomizer run build",
     "build:cosmic-draw-arena": "npm --prefix apps/cosmic-draw-arena run build",
+    "build:glory-vortex": "npm --prefix apps/glory-vortex run build",
     "build:ai-analysis-skillset": "npm --prefix apps/ai-analysis-skillset run build",
-    "build": "npm run build:team-randomizer && npm run build:cosmic-draw-arena && npm run build:ai-analysis-skillset"
+    "build": "npm run build:team-randomizer && npm run build:cosmic-draw-arena && npm run build:glory-vortex && npm run build:ai-analysis-skillset"
   }
 }

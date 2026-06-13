@@ -41,6 +41,10 @@ jobs:
         working-directory: apps/cosmic-draw-arena
         run: npm ci
 
+      - name: Install glory-vortex dependencies
+        working-directory: apps/glory-vortex
+        run: npm install
+
       - name: Install ai-analysis-skillset dependencies
         working-directory: apps/ai-analysis-skillset
         run: npm ci
@@ -53,6 +57,10 @@ jobs:
         working-directory: apps/cosmic-draw-arena
         run: npm run build
 
+      - name: Build glory-vortex
+        working-directory: apps/glory-vortex
+        run: npm run build
+
       - name: Build ai-analysis-skillset
         working-directory: apps/ai-analysis-skillset
         run: npm run build
@@ -63,6 +71,8 @@ jobs:
           cp -R apps/team-randomizer/dist/. public/team-randomizer/
           mkdir -p public/cosmic-draw-arena
           cp -R apps/cosmic-draw-arena/dist/. public/cosmic-draw-arena/
+          mkdir -p public/glory-vortex
+          cp -R apps/glory-vortex/dist/. public/glory-vortex/
           mkdir -p public/ai-analysis-skillset
           cp -R apps/ai-analysis-skillset/dist/. public/ai-analysis-skillset/
 
